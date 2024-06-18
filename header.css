@@ -1,0 +1,51 @@
+@layer firstLayer;
+
+:root{
+    --header-margin-horizantal: 20%;
+    --header-border-color: black;
+    --header-border-radius: 15px;
+    --score-border-color: black;
+    --score-border-radius: 10px;
+    --score-padding: 5px;
+}
+
+* {
+    outline: 0px solid black;
+}
+
+@layer firstLayer{
+    .header{
+        display: flex;
+        padding: 0.5em;
+        border: 2px solid var(--header-border-color);
+        border-radius: var(--header-border-radius);
+    }
+    .title{
+        margin-right: auto;
+        padding: 0.5em;
+    }
+
+    .score{
+        margin-left: auto;
+        border: 1px solid var(--score-border-color);
+        border-radius: var(--score-border-radius);
+        padding-left: var(--score-padding);
+        padding-right: var(--score-padding);
+    }
+
+    .score .text-wrapper{
+        display: flex;
+    }
+
+    .score .text{
+        margin:auto;
+    }
+    .score .val-wrapper{
+        display: flex;
+    }
+    .score .val{
+        font-size: 2.5em;
+        margin: auto;
+    }
+
+}
