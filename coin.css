@@ -1,0 +1,48 @@
+@layer coinLayer;
+
+:root{
+    --box-padding: 10px;
+    --box-width: 120px;
+    --box-height:120px;
+    --coin-outer-width: calc(var(--box-width) - var(--box-padding) * 2);
+    --coin-outer-height: var(--coin-outer-width);
+    --outer-padding: 10px;
+    --coin-inner-width: calc(var(--coin-outer-width) - var(--outer-padding) * 2);
+    --coin-inner-height: var(--coin-inner-width);
+    --inner-padding: 10px;
+    --outer-radius: calc((var(--box-width) - var(--box-padding) * 2) / 2);
+    --inner-radius: calc(var(--outer-radius) - var(--outer-padding));
+}
+
+*{
+    outline: 1px solid black;
+}
+
+@layer coinLayer{
+    .coin{
+        width: var(--box-width);
+        height: var(--box-height);
+        padding: var(--box-padding);
+    }
+
+    .coin-outer{
+        padding: var(--outer-padding);
+        border-radius: var(--outer-radius);
+        background-color: blue;
+        width: var(--coin-outer-width);
+        height: var(--coin-outer-height);
+    }
+
+    .coin-inner{
+        display: flex;
+        padding: var(--inner-padding);
+        border-radius: var(--inner-radius);
+        width: var(--coin-inner-width);
+        height: var(--coin-inner-height);
+    }
+
+    .coin-inner img{
+        margin:auto;
+    }
+
+}
