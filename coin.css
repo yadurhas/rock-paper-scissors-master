@@ -2,19 +2,25 @@
 
 :root{
     --box-padding: 10px;
-    --box-width: 120px;
-    --box-height:120px;
+    --box-width: 150px;
+    --box-height:150px;
     --coin-outer-width: calc(var(--box-width) - var(--box-padding) * 2);
     --coin-outer-height: var(--coin-outer-width);
-    --outer-padding: 10px;
+    --outer-padding: 20px;
     --coin-inner-width: calc(var(--coin-outer-width) - var(--outer-padding) * 2);
     --coin-inner-height: var(--coin-inner-width);
     --inner-padding: 10px;
     --outer-radius: calc((var(--box-width) - var(--box-padding) * 2) / 2);
     --inner-radius: calc(var(--outer-radius) - var(--outer-padding));
+    --inner-background: white;
+    --outer-background: yellow;
+    --image-height: calc(1.25 * var(--inner-radius));
+    --shadows-margin: -100px;
+    --shadows-outer-background: grey;
 }
 
 *{
+    box-sizing: border-box;
     outline: 1px solid black;
 }
 
@@ -23,12 +29,13 @@
         width: var(--box-width);
         height: var(--box-height);
         padding: var(--box-padding);
+    
     }
 
     .coin-outer{
         padding: var(--outer-padding);
         border-radius: var(--outer-radius);
-        background-color: blue;
+        background-color: var(--outer-background);
         width: var(--coin-outer-width);
         height: var(--coin-outer-height);
     }
@@ -39,10 +46,36 @@
         border-radius: var(--inner-radius);
         width: var(--coin-inner-width);
         height: var(--coin-inner-height);
+        background-color: var(--inner-background);
     }
 
     .coin-inner img{
         margin:auto;
+        height: var(--image-height);
+    }
+
+    .shadows{
+        margin-top: var(--shadows-margin);
+        width: var(--box-width);
+        height: var(--box-height);
+        padding: var(--box-padding);
+    }
+
+    .shadows .outer{
+        padding: var(--outer-padding);
+        border-radius: var(--outer-radius);
+        background-color: var(--shadows-outer-background);
+        width: var(--coin-outer-width);
+        height: var(--coin-outer-height);
+    }
+
+    .shadows .inner{
+        display: flex;
+        padding: var(--inner-padding);
+        border-radius: var(--inner-radius);
+        width: var(--coin-inner-width);
+        height: var(--coin-inner-height);
+        background-color: var(--inner-background);
     }
 
 }
