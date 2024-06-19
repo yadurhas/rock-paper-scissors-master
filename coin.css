@@ -14,14 +14,15 @@
     --inner-radius: calc(var(--outer-radius) - var(--outer-padding));
     --inner-background: white;
     --outer-background: yellow;
-    --image-height: calc(1.25 * var(--inner-radius));
-    --shadows-margin: -100px;
+    --image-height: calc(1.1 * var(--inner-radius));
+    --shadows-margin: -1px;
     --shadows-outer-background: grey;
+    --coin-background-color: blue;
 }
 
 *{
     box-sizing: border-box;
-    outline: 1px solid black;
+    outline: 0px solid black;
 }
 
 @layer coinLayer{
@@ -29,7 +30,7 @@
         width: var(--box-width);
         height: var(--box-height);
         padding: var(--box-padding);
-    
+        background-color: var(--coin-background-color);
     }
 
     .coin-outer{
@@ -38,6 +39,7 @@
         background-color: var(--outer-background);
         width: var(--coin-outer-width);
         height: var(--coin-outer-height);
+        box-shadow: 0px -6px inset orange;
     }
 
     .coin-inner{
@@ -47,6 +49,7 @@
         width: var(--coin-inner-width);
         height: var(--coin-inner-height);
         background-color: var(--inner-background);
+        box-shadow: 0px 4px inset grey;
     }
 
     .coin-inner img{
