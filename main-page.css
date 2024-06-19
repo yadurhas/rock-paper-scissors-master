@@ -1,0 +1,30 @@
+@import url(./header.css);
+
+@import url(./choices.css);
+
+@import url(./game-result.css);
+
+@layer mainLayer{
+    body{
+        background-color: hsl(214, 47%, 23%);
+    }
+    .choices{
+        margin: 5% auto;
+    }
+
+    .hidden{
+        display: none;
+    }
+
+    .custom-button:hover{
+        cursor: pointer;
+        box-shadow: 3px 3px 5px black;
+    }
+
+    .custom-button:active{
+        box-shadow: none;
+    }
+
+
+}
+

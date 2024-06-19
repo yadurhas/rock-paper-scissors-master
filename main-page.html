@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main UI</title>
+    <link rel="stylesheet" href="./main-page.css">
+</head>
+<body>
+    <div class = "header">
+        <div class = "title">
+            <div>ROCK</div>
+            <div>PAPERS</div>
+            <div>SCISSORS</div>
+        </div>
+        <div class = "score">
+            <div class = "text-wrapper">
+               <div class = "text">SCORE</div></div>
+            <div class = "val-wrapper">
+                <div class="val">0</div>
+            </div>
+        </div>
+    </div>
+    <div class = "choices">
+        <div class = "top">
+            <div class="coin rock">
+                <div class = "coin-outer">
+                    <div class = "coin-inner">
+                        <img src="./images/icon-rock.svg" alt="scissors">    
+                    </div>
+                </div>
+            </div>
+            <div class="coin paper">
+                <div class = "coin-outer">
+                    <div class = "coin-inner">
+                        <img src="./images/icon-paper.svg" alt="scissors">    
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bottom">
+            <div class="coin scissors">
+                <div class = "coin-outer">
+                    <div class = "coin-inner">
+                        <img src="./images/icon-scissors.svg" alt="scissors">    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class = "result-board-wrapper hidden">
+        <div class = "result-board">
+            <div class = "selected pick01">
+                <div class = "player"><div>YOU PICKED</div></div>
+                <div class = "coin"> 
+                    <div class = "coin-outer">
+                        <div class = "coin-inner">   
+                            <img class = "hidden" src="./images/icon-rock.svg" alt="rock">
+                            <img class = "hidden" src="./images/icon-paper.svg" alt="paper"> 
+                            <img class = "hidden"src="./images/icon-scissors.svg" alt="scissors">
+                        </div>
+                    </div>
+                    <div class = "circle c1"></div>
+                    <div class = "circle c2"></div>
+                    <div class = "circle c3"></div>
+                </div>
+            </div>
+            <div class = "result hidden">
+                    <div class = "winner-label">YOU WIN</div>
+                    <div class = "custom-button">
+                        <div class = "play-again">PLAY AGAIN</div>
+                    </div>
+            </div>
+            <div class = "selected pick02">
+                <div class = "player"><div>THE HOUSE PICKED</div></div>
+                <div class = "coin"> 
+                    <div class = "coin-outer">
+                        <div class = "coin-inner">   
+                            <img class = "hidden" src="./images/icon-rock.svg" alt="rock">
+                            <img class = "hidden" src="./images/icon-paper.svg" alt="paper"> 
+                            <img class = "hidden"src="./images/icon-scissors.svg" alt="scissors">
+                        </div>
+                    </div>
+                    <div class = "circle c1"></div>
+                    <div class = "circle c2"></div>
+                    <div class = "circle c3"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./JS/main-page.js"></script>
+</body>
+</html>

@@ -20,8 +20,6 @@
         background-size: var(--box-width);
         background-repeat: no-repeat;
         background-position: calc(var(--box-width) / 2);
-        background-color: var(--choices-background);
-
         width: calc(var(--box-width) * 2);
     }
     .top, .bottom{
@@ -38,17 +36,17 @@
 
     .rock .coin-outer{
         background-color: var(--rock-outer-color);
-        box-shadow: 0px -6px inset hsl(349, 71%, 52%);
+        box-shadow: 0px -8px inset hsl(349, 71%, 52%);
     }
 
     .paper .coin-outer{
         background-color: var(--paper-outer-color);
-        box-shadow: 0px -6px inset hsl(230, 89%, 62%);
+        box-shadow: 0px -8px inset hsl(230, 89%, 62%);
     }
 
     .scissors .coin-outer{
         background-color: var(--scissors-outer-color);
-        box-shadow: 0px -6px inset hsl(39, 89%, 49%);
+        box-shadow: 0px -8px inset hsl(39, 89%, 49%);
     }
 
     .choices .coin-inner:hover{
