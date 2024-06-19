@@ -1,0 +1,52 @@
+@import url(./selected.css) layer(selectedUI);
+
+.{
+    box-sizing: border-box;
+}
+
+@layer game-result-UI{
+
+    .result-board-wrapper{
+        width:100%;
+        display: flex;
+    }
+
+    .result-board{
+        display: flex;
+        margin: 20px auto;
+    }
+
+    .result-board .selected{
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+
+    .result-board .result{
+        margin: auto 40px;
+        font-size: 2rem;
+        color: white;
+    }
+
+    .result-board .result .custom-button{
+        color: black;
+        background-color: white;
+        padding: 10px 20px;
+        display: flex;
+        border-radius: 5px;
+        margin-top: 20px;
+    }
+
+    .result-board .result.hidden{
+        display: none;
+    }
+
+    .result-board .result .custom-button .play-again{
+        font-size: 1rem;
+        margin: auto;
+    } 
+
+    .result-board .selected.winner{
+        position: relative;
+        z-index: -1;
+    }
+}
