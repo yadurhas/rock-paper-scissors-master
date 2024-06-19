@@ -1,6 +1,6 @@
 @import url(./selected.css) layer(selectedUI);
 
-.{
+*{
     box-sizing: border-box;
 }
 
