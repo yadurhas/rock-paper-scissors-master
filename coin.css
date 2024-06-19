@@ -1,7 +1,7 @@
 @layer coinLayer;
 
 :root{
-    --box-padding: 10px;
+    --box-padding: 15px;
     --box-width: 150px;
     --box-height:150px;
     --coin-outer-width: calc(var(--box-width) - var(--box-padding) * 2);
@@ -17,7 +17,6 @@
     --image-height: calc(1.1 * var(--inner-radius));
     --shadows-margin: -1px;
     --shadows-outer-background: grey;
-    --coin-background-color: blue;
 }
 
 *{
@@ -30,7 +29,6 @@
         width: var(--box-width);
         height: var(--box-height);
         padding: var(--box-padding);
-        background-color: var(--coin-background-color);
     }
 
     .coin-outer{
@@ -49,7 +47,16 @@
         width: var(--coin-inner-width);
         height: var(--coin-inner-height);
         background-color: var(--inner-background);
-        box-shadow: 0px 4px inset grey;
+        box-shadow: 0px -4px rgb(128, 128, 128, 0.7);
+    }
+
+    .coin-inner:hover{
+        cursor: pointer;
+        box-shadow: 0px 0px;
+    }
+
+    .coin-inner:active{
+        box-shadow: 0px -2px inset rgb(128, 128, 128);;
     }
 
     .coin-inner img{

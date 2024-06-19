@@ -1,0 +1,55 @@
+@import url(./coin.css) layer(coinCSS);
+
+@layer choicesLayer;
+
+:root{
+    --rock-outer-color: hsl(349, 70%, 56%);
+    --paper-outer-color: hsl(230, 89%, 65%);
+    --scissors-outer-color: hsl(40, 84%, 53%);
+    --choices-background: hsl(214, 47%, 23%);
+}
+
+*{
+    box-sizing: border-box;
+    outline: 0px solid black;
+}
+
+@layer choicesLayer{
+    .choices{
+        background-image: url(./images/bg-triangle.svg);
+        background-size: var(--box-width);
+        background-repeat: no-repeat;
+        background-position: calc(var(--box-width) / 2);
+        background-color: var(--choices-background);
+
+        width: calc(var(--box-width) * 2);
+    }
+    .top, .bottom{
+        display: flex;
+    }
+
+    .bottom .coin{
+        margin:auto;
+    }
+
+    .coin{
+        background-color: rgb(0, 0, 255, 0);
+    }
+
+    .rock .coin-outer{
+        background-color: var(--rock-outer-color);
+        box-shadow: 0px -6px inset hsl(349, 71%, 52%);;
+    }
+
+    .paper .coin-outer{
+        background-color: var(--paper-outer-color);
+        box-shadow: 0px -6px inset hsl(230, 89%, 62%);
+    }
+
+    .scissors .coin-outer{
+        background-color: var(--scissors-outer-color);
+        box-shadow: 0px -6px inset hsl(39, 89%, 49%);
+    }
+
+
+}   
