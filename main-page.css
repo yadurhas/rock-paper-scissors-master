@@ -14,7 +14,7 @@
     }
 
     .hidden{
-        display: none;
+        display: none !important;
     }
 
     .custom-button:hover{
@@ -47,8 +47,48 @@
 
     .rules:hover{
         cursor: pointer;
+        background-color: rgb(255, 255, 255, 0.1);
+    }
+
+    .rules-tab-wrapper{
+        display: flex;
+        position: fixed;
+        top: 50vh;
+        left: 50vw;
+        transform: translate(-50%, -50%);
+    }
+
+    .rules-tab{
         background-color: white;
-        opacity = 1;
+        border-radius: 10px;
+        padding: 20px;
+    }
+
+    .rules-tab .title{
+        display: flex;
+    }
+
+    .rules-tab .title .name{
+        margin-right: auto;
+        
+    }
+
+    .rules-tab .title .close{
+        display: flex;
+        
+    }
+
+    .rules-tab .title .close img{
+        
+        margin: auto;
+    }
+
+    .rules-tab .title .close img:hover{
+        cursor: pointer;
+    }
+
+    .rules-tab .title{
+        color: rgb(99, 90, 90);
     }
 }
 

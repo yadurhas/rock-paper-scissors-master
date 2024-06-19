@@ -123,4 +123,16 @@ document.addEventListener("DOMContentLoaded", () => {
         
     });
 
+    const rulesButton = document.querySelector(".rules");
+    const rulesBook = document.querySelector(".rules-tab-wrapper");
+    const rulesClose = document.querySelector(".rules-tab-wrapper .close img");
+    
+    rulesButton.addEventListener('click', () => {
+        rulesBook.classList.remove("hidden");
+    });
+
+    rulesClose.addEventListener('click', () => {
+        rulesBook.classList.add("hidden");
+    });
+
 });
