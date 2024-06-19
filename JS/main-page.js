@@ -53,7 +53,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const score = document.querySelector(".score .val");
   
-    console.log(gameOptions);
+    const playAgain = resultDiv.querySelector(".custom-button");
+
     gameOptions.forEach((option) => {
         option.addEventListener("click", () => {
             choicesDiv.classList.add("hidden");
@@ -67,7 +68,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
             }
 
-            let pickRandom = Math.floor(Math.random() * 3);
+            let pickRandom = Math.floor(Math.random() * 9999999) % 3;
             computerPickSelected.classList.add("intermediate");
             
             setTimeout(() => {
@@ -75,7 +76,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 computerPick.classList.add(options[pickRandom]);
                 computerPickImages[pickRandom].classList.remove("hidden");
                 
-                result.classList.remove("hidden");
+                
                 winner_text.textContent = getResult(i, pickRandom, score);
                 if (winner_text.textContent == "YOU WIN!") {
                     yourPick.parentElement.classList.add("winner");
@@ -84,8 +85,42 @@ document.addEventListener("DOMContentLoaded", () => {
                 else if (winner_text.textContent == "YOU LOSE!"){
                     computerPickSelected.classList.add("winner");
                 }
-            }, 200);
+                result.classList.remove("hidden");
+            }, 00);
             
         });
     });
+
+    playAgain.addEventListener("click", () => {
+
+        result.classList.add("hidden");
+
+        if (winner_text.textContent == "YOU WIN!") {
+            yourPick.parentElement.classList.remove("winner");
+        }
+        else if (winner_text.textContent == "YOU LOSE!") {
+            computerPickSelected.classList.remove("winner");
+        }
+
+        for (i = 0; i <3; i++) {
+            if (yourPick.classList.contains(options[i])) {
+                yourPickImages[i].classList.add("hidden");
+                yourPick.classList.remove(options[i]);
+                break;
+            }
+        }
+
+        for (i = 0; i < 3; i++) {
+            if (computerPick.classList.contains(options[i])) {
+                computerPickImages[i].classList.add("hidden");
+                computerPick.classList.remove(options[i]);
+                break;
+            }
+        }
+
+        resultDiv.classList.add("hidden");
+        choicesDiv.classList.remove("hidden");
+        
+    });
+
 });

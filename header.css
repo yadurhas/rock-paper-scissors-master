@@ -2,7 +2,7 @@
 
 :root{
     --header-margin-horizantal: 20%;
-    --header-border-color: white;
+    --header-border-color: hsl(239, 23%, 61%);
     --header-border-radius: 15px;
     --score-border-color: black;
     --score-border-radius: 10px;
@@ -18,7 +18,8 @@
         display: flex;
         padding: 0.5em;
         width: 50%;
-        border: 2px solid var(--header-border-color);
+        min-width: 320px;
+        border: 3px solid var(--header-border-color);
         border-radius: var(--header-border-radius);
         margin: 30px auto;
     }
@@ -45,11 +46,13 @@
 
     .score .text{
         margin: 5px auto;
+        color: hsl(240, 61%, 43%);
     }
     .score .val-wrapper{
         display: flex;
     }
     .score .val{
+        color: rgb(99, 90, 90);
         font-size: 3em;
         margin: auto;
     }

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Main UI</title>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./main-page.css">
 </head>
 <body>
@@ -66,7 +67,9 @@
                 </div>
             </div>
             <div class = "result hidden">
-                    <div class = "winner-label">YOU WIN</div>
+                    <div id = "label-wrapper">
+                        <div class = "winner-label">YOU WIN</div>
+                    </div>
                     <div class = "custom-button">
                         <div class = "play-again">PLAY AGAIN</div>
                     </div>
@@ -88,6 +91,7 @@
             </div>
         </div>
     </div>
+    <div class = "rules">Rules</div>
     <script src="./JS/main-page.js"></script>
 </body>
 </html>

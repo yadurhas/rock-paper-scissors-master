@@ -7,6 +7,7 @@
 @layer mainLayer{
     body{
         background-color: hsl(214, 47%, 23%);
+        font-family: 'Barlow Semi Condensed', sans-serif;
     }
     .choices{
         margin: 5% auto;
@@ -25,6 +26,29 @@
         box-shadow: none;
     }
 
+    #label-wrapper{
+        display: flex;
+    }
 
+    #label-wrapper .winner-label{
+        margin: auto;
+    }
+    .rules{
+        position: fixed;
+        bottom: 50px;
+        right: 50px;
+        font-size: 2.5rem;
+        padding: 0px 10px 2px;
+        background-color: transparent;
+        border: 2px solid hsl(239, 23%, 61%);
+        color: white;
+        border-radius: 10px;
+    }
+
+    .rules:hover{
+        cursor: pointer;
+        background-color: white;
+        opacity = 1;
+    }
 }
 
