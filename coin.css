@@ -50,15 +50,6 @@
         box-shadow: 0px -4px rgb(128, 128, 128, 0.7);
     }
 
-    .coin-inner:hover{
-        cursor: pointer;
-        box-shadow: 0px 0px;
-    }
-
-    .coin-inner:active{
-        box-shadow: 0px -2px inset rgb(128, 128, 128);;
-    }
-
     .coin-inner img{
         margin:auto;
         height: var(--image-height);

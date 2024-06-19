@@ -38,7 +38,7 @@
 
     .rock .coin-outer{
         background-color: var(--rock-outer-color);
-        box-shadow: 0px -6px inset hsl(349, 71%, 52%);;
+        box-shadow: 0px -6px inset hsl(349, 71%, 52%);
     }
 
     .paper .coin-outer{
@@ -49,6 +49,15 @@
     .scissors .coin-outer{
         background-color: var(--scissors-outer-color);
         box-shadow: 0px -6px inset hsl(39, 89%, 49%);
+    }
+
+    .choices .coin-inner:hover{
+        cursor: pointer;
+        box-shadow: 0px 0px;
+    }
+
+    .choices .coin-inner:active{
+        box-shadow: 0px -2px inset rgb(128, 128, 128);;
     }
 
 
